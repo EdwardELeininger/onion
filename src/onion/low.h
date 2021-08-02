@@ -48,9 +48,7 @@ extern "C" {
 #endif
 
 #ifdef __ANDROID__
-int pthread_cancel(pthread_t h) {
-            return pthread_kill(h, 0);
-}
+int pthread_cancel(pthread_t h);
 #endif /* __ANDROID__ */
 
 
