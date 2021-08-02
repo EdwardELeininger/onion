@@ -53,7 +53,7 @@ endif()
 
 add_subdirectory(websockets)
 if(${GC_ENABLED})
-add_subdirectory(boehm-gc)
+    #add_subdirectory(boehm-gc)
 endif(${GC_ENABLED})
 if (${ONION_USE_BINDINGS_CPP})
 	add_subdirectory(cpp)

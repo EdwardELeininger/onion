@@ -40,6 +40,13 @@
 #include "low.h"
 #include "log.h"
 
+
+#ifdef __ANDROID__
+int pthread_cancel(pthread_t h) {
+            return pthread_kill(h, 0);
+}
+#endif
+
 /// @defgroup low Low level OS functions. Encapsulates some low level functions to allow other OS implementations (Boehm GC)
 
 /* the pointers to user provided routines for memory management &

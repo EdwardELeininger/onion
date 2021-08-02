@@ -51,8 +51,7 @@ extern "C" {
 /// Sets the timeout for this slot. Current implementation takes ms, but then it rounds to seconds.
   void onion_poller_slot_set_timeout(onion_poller_slot * el, int timeout_ms);
 /// Sets the polling type: read/write/other. O_POLL_READ | O_POLL_WRITE | O_POLL_OTHER
-  void onion_poller_slot_set_type(onion_poller_slot * el,
-                                  onion_poller_slot_type_e type);
+  void onion_poller_slot_set_type(onion_poller_slot * el, onion_poller_slot_type_e type);
 
 /// Create a new poller
   onion_poller *onion_poller_new(int aprox_n);
